@@ -24,13 +24,16 @@ function update() {
 
   //output
   if (age >= 17) {
-     document.getElementById("answer").innerHTML = "You can see an R movie alone"
+    document.getElementById("answer").innerHTML = "You can see an R movie alone"
   } else if (age >= 13) {
-    document.getElementById("answer").innerHTML = "You can see a PG-13 movie alone"
+    document.getElementById("answer").innerHTML =
+      "You can see a PG-13 movie alone"
   } else if (age >= 5) {
-    document.getElementById("answer").innerHTML = "You can see a G or PG movie alone"
+    document.getElementById("answer").innerHTML =
+      "You can see a G or PG movie alone"
   } else {
-    document.getElementById("answer").innerHTML = "You're too young for most thing"
+    document.getElementById("answer").innerHTML =
+      "You're too young for most thing"
   }
   document.getElementById("end").innerHTML = "Thanks for verifyng your age"
 }
