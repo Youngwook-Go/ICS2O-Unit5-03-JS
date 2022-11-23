@@ -11,13 +11,26 @@
  */
 
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Template-PWA/sw.js", {
-    scope: "/ICS2O-Template-PWA/",
+  navigator.serviceWorker.register("/ICS2O-Unit5-03-JS/sw.js", {
+    scope: "/ICS2O-Unit5-03-JS/",
   })
 }
 
 // function description
 
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function update() {
+  //input
+  const age = parseFloat(document.getElementById("user-input").value)
+
+  //output
+  if (age >= 17) {
+     document.getElementById("answer").innerHTML = "You can see an R movie alone"
+  } else if (age >= 13) {
+    document.getElementById("answer").innerHTML = "You can see a PG-13 movie alone"
+  } else if (age >= 5) {
+    document.getElementById("answer").innerHTML = "You can see a G or PG movie alone"
+  } else {
+    document.getElementById("answer").innerHTML = "You're too young for most thing"
+  }
+  document.getElementById("end").innerHTML = "Thanks for verifyng your age"
 }
